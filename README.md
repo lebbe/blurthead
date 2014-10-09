@@ -8,19 +8,19 @@ It is very easy to use blurthead. It converts your favorite portret of yourself 
 
 HTML:
 
-```
+```HTML
 <img src="head.gif" data-blurthead="mouthPlacement: 100; ms: 40;">
 ```
 
 JavaScript initialization:
 
-```
+```JavaScript
 // Initialize the blurters like this.
 $(function() {
 	$('img[data-blurthead]').blurthead();
 });
 ```
 
-Optoins:
+Options:
 
-You provide options within the data-blurthead html property in the <img>-tag. Currently available optoins are 'ms' which says how slow/fast the animation is running (higher number = faster animation), and 'mouthPlacement' denoting where the mouth is placed in pixels counting from the top.
+You may provide options within the data-blurthead html property in the <img>-tag. Currently available options are 'ms' which says how slow/fast the animation is running (higher number = faster animation), and 'mouthPlacement' denoting where the mouth is placed in pixels counting from the top.
