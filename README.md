@@ -23,4 +23,4 @@ $(function() {
 
 Options:
 
-You may provide options within the data-blurthead html property in the <img>-tag. Currently available options are 'ms' which says how slow/fast the animation is running (higher number = faster animation), and 'mouthPlacement' denoting where the mouth is placed in pixels counting from the top.
+You may provide options within the data-blurthead html property in the <img>-tag. Currently available options are 'ms' which says how slow/fast the animation is running (higher number = slower animation), and 'mouthPlacement' denoting where the mouth is placed in pixels counting from the top.
