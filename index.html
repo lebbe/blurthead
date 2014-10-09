@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blurthead.js</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+canvas {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+</head>
+<body>
+<div class="jumbotron">
+  <h1>Blurthead.js</h1>
+  <p>This is a simple javascript jQuery plugin to make images of heads very talkative, aka blurty!</p>
+  <p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/lebbe/blurthead">Fork me!</a></p>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading">Before</div>
+		  <div class="panel-body">
+		    <img class="center-block" src="face.png">
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading">After</div>
+		  <div class="panel-body">
+		    <img class="center-block" src="face.png" data-blurthead="mouthPlacement: 150;">
+		  </div>
+		</div>
+	</div>
+</div>
+
+
+<div class="well">Copyright &copy; Lars-Erik Bruce 2014. MIT License.</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="blurthead.js"></script>
+<script type="text/javascript">
+	$(function() {
+    	$('img[data-blurthead]').blurthead();
+	});
+</script>
+</body>
+</html>
