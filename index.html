@@ -4,13 +4,7 @@
 <title>Blurthead.js</title>
 <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no,minimal-ui" />
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<style>
-canvas {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-</style>
+
 </head>
 <body>
 <div class="jumbotron">
@@ -25,6 +19,9 @@ canvas {
 		  <div class="panel-heading">Before</div>
 		  <div class="panel-body">
 		    <img class="center-block" src="face.png">
+		    <select class="center-block">
+		    	<option>Professor</option>
+		    </select>
 		  </div>
 		</div>
 	</div>
@@ -33,7 +30,10 @@ canvas {
 		<div class="panel panel-default">
 		  <div class="panel-heading">After</div>
 		  <div class="panel-body">
-		    <img class="center-block" src="face.png" data-blurthead="mouthPlacement: 150;">
+		    <img class="center-block" src="face.png" data-blurthead>
+		    <button type="button" class="btn btn-default btn-lg center-block startStop stop">
+			  stop
+			</button>
 		  </div>
 		</div>
 	</div>
@@ -46,7 +46,21 @@ canvas {
 <script src="blurthead.js"></script>
 <script type="text/javascript">
 	$(function() {
-    	$('img[data-blurthead]').blurthead();
+    	var $blurthead = $('img[data-blurthead]').blurthead({
+    		mouthPlacement: 150,
+    		ms: 10
+    	});
+
+    	$('.startStop').click(function() {
+    		var $button = $(this);
+    		var from 	= $button.is('.stop') ? 'stop' : 'start'
+    		,	to		= from === 'stop' ? 'start' : 'stop';
+
+			$button.removeClass(from);
+			$button.addClass(to);
+			$button.text(to);
+			$blurthead.blurthead(from);
+    	});
 	});
 </script>
 </body>
